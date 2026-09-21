@@ -1,13 +1,17 @@
 [CmdletBinding()]
 param(
     [string] $GameDir,
-    [string] $DependenciesDir = (Join-Path $PSScriptRoot 'THIRD-PARTY-FILES-HERE'),
+    [string] $DependenciesDir,
     [switch] $LaunchGame
 )
 
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+if (-not $DependenciesDir) {
+    $DependenciesDir = Join-Path $PSScriptRoot 'THIRD-PARTY-FILES-HERE'
+}
 
 $lumeniteUrl = 'https://codeload.github.com/umar-afzaal/LumeniteFX/zip/refs/heads/mainline'
 $dlssUrl = 'https://raw.githubusercontent.com/NVIDIA/DLSS/main/lib/Windows_x86_64/rel/nvngx_dlss.dll'

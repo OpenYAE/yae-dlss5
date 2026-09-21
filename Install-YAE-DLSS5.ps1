@@ -3,10 +3,13 @@ param(
     [Parameter(Mandatory = $true)]
     [string] $GameDir,
 
-    [string] $DependenciesDir = (Join-Path $PSScriptRoot 'THIRD-PARTY-FILES-HERE')
+    [string] $DependenciesDir
 )
 
 $ErrorActionPreference = 'Stop'
+if (-not $DependenciesDir) {
+    $DependenciesDir = Join-Path $PSScriptRoot 'THIRD-PARTY-FILES-HERE'
+}
 $payload = Join-Path $PSScriptRoot 'payload'
 $tempRoot = $null
 
