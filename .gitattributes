@@ -1,0 +1,10 @@
+*.dll binary
+*.exe binary
+*.addon32 binary
+*.zip binary
+*.png binary
+*.fx text
+*.fxh text
+*.ini text
+*.ps1 text eol=crlf
+*.cmd text eol=crlf

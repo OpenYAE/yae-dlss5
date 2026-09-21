@@ -1,0 +1,6 @@
+THIRD-PARTY-FILES-HERE/*
+!THIRD-PARTY-FILES-HERE/README.txt
+*.download
+*.log
+_DLSS5-Backups/
+*.invalid-*

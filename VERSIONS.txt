@@ -1,0 +1,26 @@
+Tested component set
+====================
+
+Target executable name: YOU_ARE_EMPTY.exe
+No fixed executable hash is enforced; modified x86/OpenGL builds are allowed.
+
+ReShade x86: 6.8.0.2156
+ReShade x64 host: 6.8.0.2155
+DLSS5-Feeder: 1.16.0-beta.6, protocol v10
+OptiScaler DLSS-NR: 0.2.0
+Tested nvngx_dlss.dll: 310.9.1.0
+Tested nvngx_dlssnr.dll: 310.8.0.0
+Tested GPU: NVIDIA GeForce RTX 5090
+Tested driver: 616.92
+
+The archive intentionally does not include NVIDIA runtimes or LumeniteFX.
+Setup-YAE-DLSS5.ps1 downloads them at installation time.
+
+Pinned DLSS-NR 310.8.0 source:
+https://github.com/RankFTW/rhi-repo/releases/download/dlssnr-310.8.0/nvngx_dlssnr_310.8.0.zip
+
+Pinned archive SHA-256:
+388C0A7912E15EC911B9C9E11A692142B11FE387DDF2B637D8C358138FFFB3AC
+
+Pinned nvngx_dlssnr.dll SHA-256:
+E16BCF15E16E13F527491CDF7845B2FE6521A738D8F7C9C721866A8496E1FC8E
