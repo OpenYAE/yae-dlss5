@@ -14,6 +14,15 @@ You Are Empty x86/OpenGL
   -> DLSS/DLAA + DLSS Neural Rendering
 ```
 
+## Примеры
+
+На каждом изображении слева показана исходная картинка с отключённым DLSS 5,
+а справа — результат с включённым DLSS 5 Neural Rendering.
+
+![Сравнение DLSS 5 OFF и ON — персонажи и окружение](docs/images/example1.png)
+
+![Сравнение DLSS 5 OFF и ON — городская сцена](docs/images/example2.png)
+
 ## Установка одной командой
 
 Откройте PowerShell и выполните:
