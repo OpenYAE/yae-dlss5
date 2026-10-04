@@ -1,9 +1,11 @@
 # You Are Empty — DLSS 5 Neural Rendering
 
-Экспериментальная установка DLSS Neural Rendering для оригинальной 32-битной
-OpenGL-версии **You Are Empty**.
+**English** | [Русский](README.ru.md) | [Українська](README.uk.md)
 
-Цепочка обработки:
+An experimental DLSS Neural Rendering setup for the original 32-bit OpenGL
+version of **You Are Empty**.
+
+Processing chain:
 
 ```text
 You Are Empty x86/OpenGL
@@ -14,86 +16,87 @@ You Are Empty x86/OpenGL
   -> DLSS/DLAA + DLSS Neural Rendering
 ```
 
-## Примеры
+## Examples
 
-На каждом изображении слева показана исходная картинка с отключённым DLSS 5,
-а справа — результат с включённым DLSS 5 Neural Rendering.
+Each image shows the original picture with DLSS 5 disabled on the left and the
+result with DLSS 5 Neural Rendering enabled on the right.
 
-![Сравнение DLSS 5 OFF и ON — персонажи и окружение](docs/images/example1.png)
+![DLSS 5 OFF vs ON comparison — characters and environment](docs/images/example1.png)
 
-![Сравнение DLSS 5 OFF и ON — городская сцена](docs/images/example2.png)
+![DLSS 5 OFF vs ON comparison — city scene](docs/images/example2.png)
 
-## Установка одной командой
+## One-command installation
 
-Откройте PowerShell и выполните:
+Open PowerShell and run:
 
 ```powershell
 irm 'https://raw.githubusercontent.com/Blu2z/yae-dlss5/main/install.ps1' | iex
 ```
 
-Откроется окно выбора папки игры. Выберите папку, содержащую:
+A folder picker will open. Select the game folder that contains:
 
 ```text
 YOU_ARE_EMPTY.exe
 ```
 
-Хеш игрового EXE намеренно не ограничивается, поэтому допускаются
-модифицированные сборки. Игра должна оставаться 32-битной и использовать OpenGL.
+The game EXE hash is intentionally not restricted, so modified builds are
+allowed. The game must remain 32-bit and use OpenGL.
 
-Для запуска из `cmd.exe`, окна «Выполнить» или ярлыка используйте полный вариант:
+To run it from `cmd.exe`, the Run dialog or a shortcut, use the full form:
 
 ```cmd
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm 'https://raw.githubusercontent.com/Blu2z/yae-dlss5/main/install.ps1' | iex"
 ```
 
-Команда загружает текущую версию этого публичного репозитория во временную папку,
-запускает основной установщик и после завершения удаляет временные файлы.
+The command downloads the current version of this public repository to a
+temporary folder, runs the main installer and removes the temporary files when
+it finishes.
 
-Перед запуском удалённого сценария его можно просмотреть:
+You can review the remote script before running it:
 [install.ps1](https://github.com/Blu2z/yae-dlss5/blob/main/install.ps1).
 
-## Требования
+## Requirements
 
 - Windows 10/11 x64.
-- Оригинальная x86/OpenGL-версия игры с файлом `YOU_ARE_EMPTY.exe`.
-- NVIDIA GeForce RTX 50-й серии для использованной модели Neural Rendering.
-- Современный драйвер NVIDIA; проверено на RTX 5090 с драйвером 616.92.
-- Доступ к GitHub во время установки.
-- Права записи в папку игры.
+- The original x86/OpenGL version of the game with `YOU_ARE_EMPTY.exe`.
+- An NVIDIA GeForce RTX 50 series GPU for the Neural Rendering model used.
+- A recent NVIDIA driver; tested on an RTX 5090 with driver 616.92.
+- Access to GitHub during installation.
+- Write access to the game folder.
 
-## Что делает установщик
+## What the installer does
 
-- загружает недостающие LumeniteFX и NVIDIA NGX runtime из закреплённых источников;
-- проверяет SHA-256 архива DLSS-NR и цифровые подписи NVIDIA DLL;
-- сохраняет заменяемые файлы в `_DLSS5-Backups`;
-- устанавливает ReShade, DLSS5-Feeder и OptiScaler;
-- запускает встроенную проверку конфигурации.
+- downloads the missing LumeniteFX and NVIDIA NGX runtime from pinned sources;
+- verifies the SHA-256 of the DLSS-NR archive and the digital signatures of the NVIDIA DLLs;
+- backs up replaced files to `_DLSS5-Backups`;
+- installs ReShade, DLSS5-Feeder and OptiScaler;
+- runs a built-in configuration check.
 
-Установщик не меняет драйвер, реестр, Windows Defender, системные каталоги или
-глобальные Vulkan layers.
+The installer does not change the driver, the registry, Windows Defender,
+system directories or global Vulkan layers.
 
-## Управление
+## Controls
 
-- `Home` — меню ReShade.
-- `Insert` — панель host64/OptiScaler.
-- Клавиша эффектов ReShade по умолчанию использует VK 222 и может отображаться
-  как апостроф или `Э`. Её можно изменить в настройках ReShade.
+- `Home` — ReShade menu.
+- `Insert` — host64/OptiScaler panel.
+- The ReShade effects toggle key defaults to VK 222 and may appear as the
+  apostrophe or `Э` key. It can be changed in the ReShade settings.
 
-## Ручная и офлайн-установка
+## Manual and offline installation
 
-Скачайте репозиторий через **Code → Download ZIP**, распакуйте и запустите
-`Setup-YAE-DLSS5.cmd`. Полная инструкция, ручное получение зависимостей и
-восстановление из резервной копии описаны в [README.txt](README.txt).
+Download the repository via **Code → Download ZIP**, extract it and run
+`Setup-YAE-DLSS5.cmd`. Full instructions, manual retrieval of dependencies and
+restoring from a backup are described in [README.txt](README.txt) (in Russian).
 
-## Экспериментальный статус
+## Experimental status
 
-Пакет предназначен для одиночной игры. Не используйте подобные инъекторы в
-защищённых anti-cheat сетевых играх. Перед публикацией проблемы прикладывайте
-логи ReShade, DLSS5-Feeder и OptiScaler без персональных путей.
+This package is intended for single-player use. Do not use injectors like this
+in online games protected by anti-cheat. When reporting an issue, attach the
+ReShade, DLSS5-Feeder and OptiScaler logs with personal paths removed.
 
-## Сторонние компоненты
+## Third-party components
 
-Игра и её EXE не распространяются. NVIDIA runtime и LumeniteFX не хранятся в
-репозитории и загружаются установщиком из исходных источников. Остальные
-включённые компоненты сохраняют собственные лицензии; их тексты находятся в
-[`THIRD-PARTY-NOTICES`](THIRD-PARTY-NOTICES).
+The game and its EXE are not distributed. The NVIDIA runtime and LumeniteFX are
+not stored in the repository and are downloaded by the installer from their
+original sources. Other included components retain their own licenses; their
+texts are in [`THIRD-PARTY-NOTICES`](THIRD-PARTY-NOTICES).
