@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$sourceUrl = 'https://codeload.github.com/Blu2z/yae-dlss5/zip/refs/heads/main'
+$sourceUrl = 'https://codeload.github.com/OpenYAE/yae-dlss5/zip/refs/heads/main'
 $tempRoot = Join-Path ([IO.Path]::GetTempPath()) ('YAE-DLSS5-online-' + [Guid]::NewGuid().ToString('N'))
 
 try {

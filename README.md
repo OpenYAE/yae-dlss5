@@ -30,7 +30,7 @@ result with DLSS 5 Neural Rendering enabled on the right.
 Open PowerShell and run:
 
 ```powershell
-irm 'https://raw.githubusercontent.com/Blu2z/yae-dlss5/main/install.ps1' | iex
+irm 'https://raw.githubusercontent.com/OpenYAE/yae-dlss5/main/install.ps1' | iex
 ```
 
 A folder picker will open. Select the game folder that contains:
@@ -45,7 +45,7 @@ allowed. The game must remain 32-bit and use OpenGL.
 To run it from `cmd.exe`, the Run dialog or a shortcut, use the full form:
 
 ```cmd
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm 'https://raw.githubusercontent.com/Blu2z/yae-dlss5/main/install.ps1' | iex"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm 'https://raw.githubusercontent.com/OpenYAE/yae-dlss5/main/install.ps1' | iex"
 ```
 
 The command downloads the current version of this public repository to a
@@ -53,7 +53,7 @@ temporary folder, runs the main installer and removes the temporary files when
 it finishes.
 
 You can review the remote script before running it:
-[install.ps1](https://github.com/Blu2z/yae-dlss5/blob/main/install.ps1).
+[install.ps1](https://github.com/OpenYAE/yae-dlss5/blob/main/install.ps1).
 
 ## Requirements
 
@@ -100,3 +100,5 @@ The game and its EXE are not distributed. The NVIDIA runtime and LumeniteFX are
 not stored in the repository and are downloaded by the installer from their
 original sources. Other included components retain their own licenses; their
 texts are in [`THIRD-PARTY-NOTICES`](THIRD-PARTY-NOTICES).
+
+The installer and its scripts are under the MIT license ([LICENSE](LICENSE)).

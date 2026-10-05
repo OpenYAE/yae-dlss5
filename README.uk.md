@@ -30,7 +30,7 @@ You Are Empty x86/OpenGL
 Відкрийте PowerShell і виконайте:
 
 ```powershell
-irm 'https://raw.githubusercontent.com/Blu2z/yae-dlss5/main/install.ps1' | iex
+irm 'https://raw.githubusercontent.com/OpenYAE/yae-dlss5/main/install.ps1' | iex
 ```
 
 Відкриється вікно вибору теки гри. Виберіть теку, що містить:
@@ -45,14 +45,14 @@ YOU_ARE_EMPTY.exe
 Для запуску з `cmd.exe`, вікна «Виконати» або ярлика використовуйте повний варіант:
 
 ```cmd
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm 'https://raw.githubusercontent.com/Blu2z/yae-dlss5/main/install.ps1' | iex"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm 'https://raw.githubusercontent.com/OpenYAE/yae-dlss5/main/install.ps1' | iex"
 ```
 
 Команда завантажує поточну версію цього публічного репозиторію в тимчасову теку,
 запускає основний інсталятор і після завершення видаляє тимчасові файли.
 
 Перед запуском віддаленого сценарію його можна переглянути:
-[install.ps1](https://github.com/Blu2z/yae-dlss5/blob/main/install.ps1).
+[install.ps1](https://github.com/OpenYAE/yae-dlss5/blob/main/install.ps1).
 
 ## Вимоги
 
@@ -100,3 +100,5 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm 'https://raw.git
 репозиторії та завантажуються інсталятором з оригінальних джерел. Інші
 включені компоненти зберігають власні ліцензії; їхні тексти знаходяться в
 [`THIRD-PARTY-NOTICES`](THIRD-PARTY-NOTICES).
+
+Інсталятор і його скрипти поширюються за ліцензією MIT ([LICENSE](LICENSE)).
